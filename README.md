@@ -311,3 +311,24 @@ conda create -n eduvqa python=3.10
 conda activate eduvqa
 
 pip install -r requirements.txt
+```
+
+---
+
+#  Citation
+
+If you find this work useful for your research, please consider citing our paper:
+
+```bibtex
+@article{
+}
+```
+
+---
+
+# Contact
+
+For any questions, please feel free to reach out to:
+- **Baoliang Chen**: [blchen6-c@my.cityu.edu.hk](mailto:blchen6-c@my.cityu.edu.hk)
+- **Xinlong Bu**: [2024023476@m.scnu.edu.cn](mailto:2024023476@m.scnu.edu.cn)
+- **Zhanjie Yu**: [zhanjieyu@scnu.edu.cn](mailto:zhanjieyu@scnu.edu.cn)
