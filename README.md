@@ -79,11 +79,7 @@ We introduce **EduAIGVBench**, the first benchmark specifically designed for con
 
 ---
 
-## 🔹 Category Examples
-
-EduAIGVBench covers diverse educational scenarios in early mathematics education.
-
-### Counting
+## 🔹 Dataset Overview
 
 <p align="center">
   <img src="assets/dataset.png" width="90%">
@@ -91,97 +87,93 @@ EduAIGVBench covers diverse educational scenarios in early mathematics education
 
 <p align="center">
   <em>
-  Examples of numerical quantity understanding and counting consistency.
+  An overview of EduAIGVBench, divided into four educational categories: Numbers, Geometry, Measurement, and Probability.
   </em>
 </p>
 
 ---
 
-### Geometry
+## 🔹 Representative Dataset Samples
 
 <p align="center">
-  <img src="assets/dataset_supplement_4class.pdf" width="90%">
+  <img src="assets/dataset_supplement_4class.png" width="90%">
 </p>
 
 <p align="center">
   <em>
-  An overview of our dataset, divided into four categories: Numbers, Geometry, Measurement, and Probability.
+  Representative samples from EduAIGVBench across four educational categories.
   </em>
 </p>
 
 ---
 
-### Spatial Reasoning
+## 🔹 Human Annotation and Quality Levels
 
 <p align="center">
-  <img src="assets/category_spatial.png" width="90%">
+  <img src="assets/dataset_quality_level.png" width="90%">
 </p>
 
 <p align="center">
   <em>
-  Examples of spatial configuration and reasoning tasks.
+  Qualitative examples across different perceptual and semantic quality dimensions, including spatial fidelity, temporal fidelity, overall perceptual quality, and prompt alignment.
   </em>
 </p>
 
 ---
 
-### Measurement
+# 🔬 Qualitative Analysis and Model Comparison
+
+## 🔹 Cross-Model Comparison
 
 <p align="center">
-  <img src="assets/category_measurement.png" width="90%">
+  <img src="assets/model_comparison.png" width="90%">
 </p>
 
 <p align="center">
   <em>
-  Examples involving measurement and scale understanding.
+  Qualitative comparison between EduVQA and existing AIGVQA methods on perceptual quality and prompt alignment evaluation.
   </em>
 </p>
 
 ---
 
-## 🔹 Supplementary Educational Data
-
-Beyond the core benchmark categories, EduAIGVBench also contains additional educational scenarios and long-tail concept cases.
+## 🔹 MOS Prediction Analysis
 
 <p align="center">
-  <img src="assets/supplementary_examples.png" width="95%">
+  <img src="assets/dataset_mos_pred.png" width="90%">
 </p>
 
 <p align="center">
   <em>
-  Additional educational video examples and supplementary concept categories.
+  Comparison between predicted quality scores and MOS annotations across multiple quality dimensions.
   </em>
 </p>
 
 ---
 
-## 🔹 Human Annotation Examples
-
-EduAIGVBench provides fine-grained human annotations on perceptual quality and semantic consistency.
+## 🔹 Word-Level Semantic Alignment
 
 <p align="center">
-  <img src="assets/human_annotation_examples.png" width="95%">
+  <img src="assets/dataset_supplement_word_alignment.png" width="95%">
 </p>
 
 <p align="center">
   <em>
-  Examples of human quality assessment and semantic consistency annotations.
+  Word-level alignment prediction curves compared with human MOS annotations.
   </em>
 </p>
 
 ---
 
-## 🔹 MOS Quality Examples
-
-Examples of educational videos with different perceptual quality and MOS ratings.
+## 🔹 gMAD Comparison
 
 <p align="center">
-  <img src="assets/mos_examples.png" width="95%">
+  <img src="assets/dataset_supplement_gmad.png" width="95%">
 </p>
 
 <p align="center">
   <em>
-  Comparison between high-quality and low-quality educational AI-generated videos.
+  gMAD competition results between T2VQA and EduVQA on perceptual quality and prompt alignment assessment.
   </em>
 </p>
 
