@@ -315,7 +315,7 @@ pip install -r requirements.txt
 
 ---
 
-#  Citation
+# 📚 Citation
 
 If you find this work useful for your research, please consider citing our paper:
 
@@ -326,7 +326,7 @@ If you find this work useful for your research, please consider citing our paper
 
 ---
 
-# Contact
+# 📧 Contact
 
 For any questions, please feel free to reach out to:
 - **Baoliang Chen**: [blchen6-c@my.cityu.edu.hk](mailto:blchen6-c@my.cityu.edu.hk)
