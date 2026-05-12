@@ -48,11 +48,13 @@ Our proposed framework introduces a **Structured 2D Mixture-of-Experts (S2D-MoE)
 ## 🔹 Framework Overview
 
 <p align="center">
-  <img src="assets/framework.png" width="80%">
+  <img src="assets/framework.png" width="90%">
 </p>
 
 <p align="center">
-  <em>Placeholder for the overall EduVQA framework architecture.</em>
+  <em>
+  Overview of EduVQA framework. We jointly predict five quality dimensions via a dual-path framework equipped with 2D MoE.
+  </em>
 </p>
 
 ### Key Features
