@@ -183,26 +183,124 @@ We introduce **EduAIGVBench**, the first benchmark specifically designed for con
 
 # 📊 Experimental Results
 
-EduVQA achieves state-of-the-art performance across both perceptual quality assessment and semantic alignment evaluation.
+## 📊 Quantitative Results on EduAIGVBench
 
-## 🔹 Main Results
+### 🎯 Perceptual Quality
 
-<p align="center">
-  <img src="assets/experimental_results.png" width="95%">
-</p>
-
-<p align="center">
-  <em>Placeholder for quantitative comparison results.</em>
-</p>
-
-### Highlights
-
-- Consistently outperforms existing AIGVQA baselines
-- Strong concept-level reasoning capability
-- Better alignment with human judgments
-- Excellent generalization on unseen benchmarks
+| Setting | Method | SRCC ↑ | PLCC ↑ | KRCC ↑ | RMSE ↓ |
+|----------|--------|--------|--------|--------|--------|
+| Zero-shot | ImageReward | 0.409 | 0.432 | 0.282 | 3.369 |
+| Zero-shot | Q-Align | 0.644 | 0.669 | - | - |
+| Fine-tuned | IPCE | 0.822 | 0.822 | 0.631 | 0.494 |
+| Fine-tuned | IP-IQA | 0.852 | 0.863 | 0.666 | 0.434 |
+| Fine-tuned | DOVER | 0.832 | 0.840 | 0.645 | 0.479 |
+| Fine-tuned | FasterVQA | 0.844 | 0.856 | 0.659 | 0.456 |
+| Fine-tuned | GSTVQA | 0.837 | 0.849 | 0.655 | 0.456 |
+| Fine-tuned | VSFA | 0.803 | 0.805 | 0.611 | 0.515 |
+| Fine-tuned | SimpleVQA | 0.742 | 0.758 | 0.552 | 0.553 |
+| Fine-tuned | T2VQA | 0.810 | 0.826 | 0.623 | 0.499 |
+| **Ours** | **EduVQA** | **0.869** | **0.879** | **0.688** | **0.417** |
 
 ---
+
+### 🎯 Prompt Alignment
+
+| Setting | Method | SRCC ↑ | PLCC ↑ | KRCC ↑ | RMSE ↓ |
+|----------|--------|--------|--------|--------|--------|
+| Zero-shot | CLIP | 0.270 | 0.282 | 0.184 | 3.174 |
+| Zero-shot | ImageReward | 0.409 | 0.432 | 0.282 | 3.369 |
+| Zero-shot | BLIP | 0.457 | 0.392 | 0.317 | 101.113 |
+| Zero-shot | Open-VCLIP | 0.335 | 0.229 | 0.340 | 94.306 |
+| Fine-tuned | IPCE | 0.634 | 0.643 | 0.460 | 0.604 |
+| Fine-tuned | IP-IQA | 0.648 | 0.653 | 0.469 | 0.593 |
+| Fine-tuned | T2VQA | 0.731 | 0.733 | 0.544 | 0.564 |
+| **Ours** | **EduVQA** | **0.757** | **0.768** | **0.571** | **0.527** |
+
+---
+
+## 📊 Cross-dataset Performance Comparison
+
+All models are trained on EduAIGV-1k and evaluated on two benchmarks.
+
+### 🧠 LGVQ Dataset
+
+| Method | Spatial (SRCC/PLCC) | Temporal (SRCC/PLCC) | Alignment (SRCC/PLCC) |
+|--------|---------------------|----------------------|------------------------|
+| BVQA | 0.518 / 0.608 | 0.235 / 0.550 | -- / -- |
+| CLIPVQA | 0.509 / 0.480 | 0.355 / 0.287 | -- / -- |
+| FasterVQA | 0.511 / 0.539 | 0.380 / 0.427 | -- / -- |
+| GSTVQA | 0.507 / 0.555 | 0.459 / 0.529 | -- / -- |
+| VSFA | 0.498 / 0.516 | 0.174 / 0.246 | -- / -- |
+| SimpleVQA | 0.395 / 0.442 | 0.262 / 0.394 | -- / -- |
+| IPCE | 0.324 / 0.336 | 0.428 / 0.473 | 0.201 / 0.190 |
+| IP-IQA | 0.423 / 0.473 | 0.363 / 0.454 | 0.267 / 0.256 |
+| T2VQA | 0.466 / 0.504 | 0.402 / 0.453 | 0.521 / 0.539 |
+| **EduVQA (Ours)** | **0.536 / 0.593** | **0.511 / 0.571** | **0.529 / 0.547** |
+
+---
+
+### 🎯 EvalCrafter Dataset
+
+| Method | Perceptual (SRCC/PLCC) | Alignment (SRCC/PLCC) |
+|--------|------------------------|------------------------|
+| BVQA | 0.161 / 0.172 | -- / -- |
+| CLIPVQA | 0.319 / 0.325 | -- / -- |
+| FasterVQA | 0.378 / 0.359 | -- / -- |
+| GSTVQA | 0.276 / 0.281 | -- / -- |
+| VSFA | 0.213 / 0.195 | -- / -- |
+| SimpleVQA | 0.268 / 0.289 | -- / -- |
+| IPCE | 0.247 / 0.255 | 0.245 / 0.253 |
+| IP-IQA | 0.242 / 0.239 | 0.131 / 0.137 |
+| T2VQA | 0.305 / 0.299 | 0.553 / 0.554 |
+| **EduVQA (Ours)** | **0.408 / 0.398** | **0.586 / 0.599** |
+
+---
+## 🔬 Cross-dataset Training Analysis
+
+Models are trained on different datasets and evaluated on unseen benchmarks without fine-tuning.
+
+---
+
+### 🧪 LGVQ Test Set
+
+| Train Dataset | Perceptual (SRCC/PLCC) | Alignment (SRCC/PLCC) |
+|--------------|------------------------|------------------------|
+| **EduAIGV-1k (Ours)** | **0.5558 / 0.6346** | **0.5745 / 0.5941** |
+| AIGVE-Bench | 0.2111 / 0.1986 | 0.0759 / 0.0777 |
+| TVGE | 0.1488 / 0.1688 | 0.4950 / 0.5223 |
+
+---
+
+### 🧪 TVGE Test Set
+
+| Train Dataset | Perceptual (SRCC/PLCC) | Alignment (SRCC/PLCC) |
+|--------------|------------------------|------------------------|
+| **EduAIGV-1k (Ours)** | **0.3950 / 0.3866** | 0.5580 / 0.5343 |
+| AIGVE-Bench | 0.2532 / 0.2630 | 0.1772 / 0.1685 |
+| LGVQ | 0.3796 / 0.3634 | **0.5659 / 0.5373** |
+
+---
+
+### 🧪 Q-Eval-100K Test Set
+
+| Train Dataset | Perceptual (SRCC/PLCC) | Alignment (SRCC/PLCC) |
+|--------------|------------------------|------------------------|
+| **EduAIGV-1k (Ours)** | **0.3374 / 0.3405** | 0.4358 / 0.4456 |
+| AIGVE-Bench | 0.1609 / 0.1566 | 0.0914 / 0.0980 |
+| TVGE | 0.2080 / 0.1948 | 0.4522 / 0.4486 |
+| LGVQ | 0.2889 / 0.2965 | 0.4320 / **0.4502** |
+
+---
+
+### 🧪 AIGVE-60K Test Set
+
+| Train Dataset | Perceptual (SRCC/PLCC) | Alignment (SRCC/PLCC) |
+|--------------|------------------------|------------------------|
+| **EduAIGV-1k (Ours)** | **0.5902 / 0.5704** | 0.5428 / 0.5627 |
+| AIGVE-Bench | 0.1926 / 0.1864 | 0.1796 / 0.1832 |
+| TVGE | 0.3063 / 0.3147 | **0.5683 / 0.5592** |
+| LGVQ | 0.5677 / 0.5742 | 0.5394 / **0.5694** |
+
 
 # ⚡️ Quick Start
 
