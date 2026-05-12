@@ -22,7 +22,7 @@
 # 📄 Abstract
 
 <p align="center">
-  <img src="assets/abs.png" width="95%">
+  <img src="assets/abs.png" width="90%">
 </p>
 
 <p align="center">
@@ -38,10 +38,6 @@ To address this problem, we introduce **EduAIGVBench**, the first benchmark for 
 Built upon this benchmark, we further propose **EduVQA**, a concept-aware AIGVQA framework equipped with a Structured 2D Mixture-of-Experts (S2D-MoE) architecture. By jointly modeling fine-grained concept assessment and overall quality prediction through shared experts and adaptive two-dimensional routing, EduVQA effectively captures subtle concept-level inconsistencies overlooked by conventional global scoring methods.
 
 Extensive experiments demonstrate that EduVQA consistently outperforms existing AIGVQA approaches across both perceptual and semantic evaluation tasks while exhibiting strong generalization capability on unseen benchmarks. 
-
----
-
-
 
 ---
 
@@ -71,24 +67,122 @@ Our proposed framework introduces a **Structured 2D Mixture-of-Experts (S2D-MoE)
 
 # 📚 EduAIGVBench
 
-We introduce **EduAIGVBench**, the first benchmark specifically designed for educational AI-generated video assessment.
+We introduce **EduAIGVBench**, the first benchmark specifically designed for concept-aware educational AI-generated video assessment.
 
 ## 🔹 Benchmark Statistics
 
 - **1,130 AI-generated videos**
 - **10 state-of-the-art T2V models**
-- **310,650+ human annotations**
+- **310,650 human annotations**
 - Fine-grained perceptual and semantic labels
 - Early mathematics education scenarios
 
-## 🔹 Dataset Examples
+---
+
+## 🔹 Category Examples
+
+EduAIGVBench covers diverse educational scenarios in early mathematics education.
+
+### Counting
 
 <p align="center">
-  <img src="assets/dataset_examples.png" width="95%">
+  <img src="assets/dataset.png" width="90%">
 </p>
 
 <p align="center">
-  <em>Placeholder for benchmark examples and annotation illustrations.</em>
+  <em>
+  Examples of numerical quantity understanding and counting consistency.
+  </em>
+</p>
+
+---
+
+### Geometry
+
+<p align="center">
+  <img src="assets/dataset_supplement_4class.pdf" width="90%">
+</p>
+
+<p align="center">
+  <em>
+  An overview of our dataset, divided into four categories: Numbers, Geometry, Measurement, and Probability.
+  </em>
+</p>
+
+---
+
+### Spatial Reasoning
+
+<p align="center">
+  <img src="assets/category_spatial.png" width="90%">
+</p>
+
+<p align="center">
+  <em>
+  Examples of spatial configuration and reasoning tasks.
+  </em>
+</p>
+
+---
+
+### Measurement
+
+<p align="center">
+  <img src="assets/category_measurement.png" width="90%">
+</p>
+
+<p align="center">
+  <em>
+  Examples involving measurement and scale understanding.
+  </em>
+</p>
+
+---
+
+## 🔹 Supplementary Educational Data
+
+Beyond the core benchmark categories, EduAIGVBench also contains additional educational scenarios and long-tail concept cases.
+
+<p align="center">
+  <img src="assets/supplementary_examples.png" width="95%">
+</p>
+
+<p align="center">
+  <em>
+  Additional educational video examples and supplementary concept categories.
+  </em>
+</p>
+
+---
+
+## 🔹 Human Annotation Examples
+
+EduAIGVBench provides fine-grained human annotations on perceptual quality and semantic consistency.
+
+<p align="center">
+  <img src="assets/human_annotation_examples.png" width="95%">
+</p>
+
+<p align="center">
+  <em>
+  Examples of human quality assessment and semantic consistency annotations.
+  </em>
+</p>
+
+---
+
+## 🔹 MOS Quality Examples
+
+Examples of educational videos with different perceptual quality and MOS ratings.
+
+<p align="center">
+  <img src="assets/mos_examples.png" width="95%">
+</p>
+
+<p align="center">
+  <em>
+  Comparison between high-quality and low-quality educational AI-generated videos.
+  </em>
 </p>
 
 ---
