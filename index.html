@@ -361,28 +361,89 @@
           </div>
   
           <!-- Cross-dataset Performance -->
-          <h3 class="title is-4">🔹 Cross-dataset Performance Comparison</h3>
-          <p>All models are trained on EduAIGV-1k and evaluated on two benchmarks.</p>
-  
-          <!-- LGVQ Dataset Table -->
-          <h4 class="title is-5">🧪 LGVQ Dataset</h4>
-          <div class="table-container">
-            <table class="table is-striped is-fullwidth is-hoverable">
-              <thead>
-                <tr>
-                  <th>Method</th>
-                  <th>Spatial (SRCC/PLCC)</th>
-                  <th>Temporal (SRCC/PLCC)</th>
-                  <th>Alignment (SRCC/PLCC)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>BVQA</td><td>0.518 / <strong>0.608</strong></td><td>0.235 / 0.550</td><td>-- / --</td></tr>
-                <tr><td>CLIPVQA</td><td>0.509 / 0.480</td><td>0.355 / 0.287</td><td>-- / --</td></tr>
-                <tr><td>FasterVQA</td><td>0.511 / 0.539</td><td>0.380 / 0.427</td><td>-- / --</td></tr>
-                <tr><td>GSTVQA</td><td>0.507 / 0.555</td><td>0.459 / 0.529</td><td>-- / --</td></tr>
-                <tr><td>VSFA</td><td>0.498 / 0.516</td><td>0.174 / 0.246</td><td>-- / --</td></tr>
-                <tr><td>SimpleVQA</td><td>0.395 / 0.442</td><td>0.262 / 
+            <h3 class="title is-4">🔹 Cross-dataset Performance Comparison</h3>
+            <p>All models are trained on EduAIGV-1k and evaluated on two benchmarks.</p>
+    
+            <!-- LGVQ Dataset Table -->
+            <h4 class="title is-5">🧪 LGVQ Dataset</h4>
+            <div class="table-container">
+              <table class="table is-striped is-fullwidth is-hoverable">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Spatial (SRCC/PLCC)</th>
+                    <th>Temporal (SRCC/PLCC)</th>
+                    <th>Alignment (SRCC/PLCC)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- rows here... -->
+                  <tr><td><strong>EduVQA (Ours)</strong></td><td><strong>0.536 / 0.593</strong></td><td><strong>0.511 / 0.571</strong></td><td><strong>0.529 / 0.547</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+    
+            <!-- EvalCrafter Dataset Table -->
+            <h4 class="title is-5">🧪 EvalCrafter Dataset</h4>
+            <div class="table-container">
+              <table class="table is-striped is-fullwidth is-hoverable">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>Perceptual (SRCC/PLCC)</th>
+                    <th>Alignment (SRCC/PLCC)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>EduVQA (Ours)</strong></td><td><strong>0.408 / 0.398</strong></td><td><strong>0.586 / 0.599</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+    
+            <!-- Cross-dataset Training Analysis -->
+            <h3 class="title is-4">🔹 Cross-dataset Training Analysis</h3>
+            <p>Models are trained on different datasets and evaluated on unseen benchmarks without fine-tuning.</p>
+    
+            <!-- LGVQ Test Set -->
+            <h4 class="title is-5">🧪 LGVQ Test Set</h4>
+            <div class="table-container">
+              <table class="table is-striped is-fullwidth is-hoverable">
+                <thead>
+                  <tr>
+                    <th>Train Dataset</th>
+                    <th>Perceptual (SRCC/PLCC)</th>
+                    <th>Alignment (SRCC/PLCC)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>EduAIGV-1k (Ours)</strong></td><td><strong>0.5558 / 0.6346</strong></td><td><strong>0.5745 / 0.5941</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+    
+            <!-- TVGE Test Set -->
+            <h4 class="title is-5">🧪 TVGE Test Set</h4>
+            <div class="table-container">
+              <table class="table is-striped is-fullwidth is-hoverable">
+                <thead>
+                  <tr>
+                    <th>Train Dataset</th>
+                    <th>Perceptual (SRCC/PLCC)</th>
+                    <th>Alignment (SRCC/PLCC)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>EduAIGV-1k (Ours)</strong></td><td><strong>0.3950 / 0.3866</strong></td><td>0.5580 / 0.5343</td></tr>
+                </tbody>
+              </table>
+            </div>
+    
+            <!-- Other Test Sets (Q-Eval-100K, AIGVE-60K) can follow same format -->
+    
+          </div>
+        </div>
+      </div>
+    </section>
 
   <!-- Contact -->
   <h2>📧 Contact</h2>
