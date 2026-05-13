@@ -1,1 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduVQA</title>
 
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f9fc;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 0;
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+      margin-top: 40px;
+      color: #111827;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      margin-top: 30px;
+    }
+
+    p {
+      font-size: 1.05rem;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .links {
+      margin: 20px 0 10px 0;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: #2563eb;
+      margin: 0 12px;
+      font-weight: 600;
+    }
+
+    .authors {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 1.05rem;
+    }
+
+    .section-image {
+      width: 100%;
+      max-width: 1000px;
+      display: block;
+      margin: 25px auto 10px auto;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+
+    .caption {
+      text-align: center;
+      font-style: italic;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 18px;
+      margin-top: 25px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 25px;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    th, td {
+      border: 1px solid #e5e7eb;
+      padding: 12px;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    th {
+      background: #111827;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background: #f9fafb;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #dc2626;
+    }
+
+    code {
+      background: #eef2ff;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+
+    pre {
+      background: #111827;
+      color: #f9fafb;
+      padding: 18px;
+      border-radius: 12px;
+      overflow-x: auto;
+    }
+
+    footer {
+      text-align: center;
+      color: #666;
+      margin-top: 80px;
+      padding-bottom: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>EduVQA</h1>
+
+  <div class="center" style="font-size:1.4rem; margin-bottom:20px;">
+    Towards Concept-Aware Assessment of Educational AI-Generated Videos
+  </div>
+
+  <div class="links">
+    <a href="https://EduVQA.github.io/">🌐 Homepage</a> |
+    <a href="https://drive.google.com/drive/folders/1wp_aJJI4QVDjEba4pt6ewc90M-UurGTm?usp=drive_link">🎞️ Dataset</a> |
+    <a href="https://arxiv.org/">📖 Paper</a> |
+    <a href="https://github.com/EduVQA/EduVQA">🐱 Code</a>
+  </div>
+
+  <div class="authors">
+    Baoliang Chen*, Xinlong Bu*, Hanwei Zhu, Lingyu Zhu, Jieyu Zhan
+  </div>
+
+  <!-- Abstract -->
+  <h2>📄 Abstract</h2>
+
+  <img src="assets/abs.png" class="section-image">
+
+  <div class="caption">
+    Annotation structure of EduAIGV-1k with fine-grained perceptual and semantic annotations.
+  </div>
+
+  <div class="card">
+    <p>
+      Existing AI-generated video quality assessment (AIGVQA) methods mainly focus on global perceptual realism and coarse text-video alignment, while overlooking a critical requirement in educational scenarios: <b>concept correctness</b>.
+    </p>
+
+    <p>
+      To address this problem, we introduce <b>EduAIGVBench</b>, the first benchmark for concept-aware educational AIGV assessment, containing:
+    </p>
+
+    <ul>
+      <li>1,130 AI-generated videos</li>
+      <li>10 state-of-the-art T2V models</li>
+      <li>310,650 fine-grained human annotations</li>
+    </ul>
+
+    <p>
+      We further propose <b>EduVQA</b>, a concept-aware AIGVQA framework equipped with a Structured 2D Mixture-of-Experts (S2D-MoE) architecture.
+    </p>
+  </div>
+
+  <!-- Framework -->
+  <h2>🧠 EduVQA Framework</h2>
+
+  <img src="assets/framework.png" class="section-image">
+
+  <div class="caption">
+    Overview of the EduVQA framework with dual-path S2D-MoE routing.
+  </div>
+
+  <div class="card">
+    <h3>Key Features</h3>
+
+    <ul>
+      <li>Concept-aware quality modeling</li>
+      <li>Shared expert representation learning</li>
+      <li>Adaptive two-dimensional expert routing</li>
+      <li>Joint perceptual and semantic assessment</li>
+      <li>Strong cross-benchmark generalization</li>
+    </ul>
+  </div>
+
+  <!-- Benchmark -->
+  <h2>📊 EduAIGVBench</h2>
+
+  <div class="card">
+    <h3>Benchmark Statistics</h3>
+
+    <ul>
+      <li><b>1,130 AI-generated videos</b></li>
+      <li><b>10 state-of-the-art T2V models</b></li>
+      <li><b>310,650 human annotations</b></li>
+      <li>Fine-grained perceptual and semantic labels</li>
+      <li>Early mathematics education scenarios</li>
+    </ul>
+  </div>
+
+  <h3>Dataset Overview</h3>
+
+  <img src="assets/dataset.png" class="section-image">
+
+  <div class="caption">
+    Four educational categories: Numbers, Geometry, Measurement, and Probability.
+  </div>
+
+  <h3>Representative Dataset Samples</h3>
+
+  <img src="assets/dataset_supplement_4class.png" class="section-image">
+
+  <div class="caption">
+    Representative samples from EduAIGVBench.
+  </div>
+
+  <h3>Human Annotation and Quality Levels</h3>
+
+  <img src="assets/dataset_quality_level.png" class="section-image">
+
+  <div class="caption">
+    Examples across different perceptual and semantic quality dimensions.
+  </div>
+
+  <!-- Qualitative -->
+  <h2>🔬 Qualitative Analysis</h2>
+
+  <h3>Cross-Model Comparison</h3>
+
+  <img src="assets/model_comparison.png" class="section-image">
+
+  <div class="caption">
+    Comparison between EduVQA and existing AIGVQA methods.
+  </div>
+
+  <h3>MOS Prediction Analysis</h3>
+
+  <img src="assets/dataset_mos_pred.png" class="section-image">
+
+  <div class="caption">
+    Predicted quality scores versus MOS annotations.
+  </div>
+
+  <h3>Word-Level Semantic Alignment</h3>
+
+  <img src="assets/dataset_supplement_word_alignment.png" class="section-image">
+
+  <div class="caption">
+    Word-level alignment prediction curves compared with MOS.
+  </div>
+
+  <h3>gMAD Comparison</h3>
+
+  <img src="assets/dataset_supplement_gmad.png" class="section-image">
+
+  <div class="caption">
+    gMAD comparison results between T2VQA and EduVQA.
+  </div>
+
+  <!-- Results -->
+  <h2>📈 Experimental Results</h2>
+
+  <h3>Perceptual Quality</h3>
+
+  <table>
+    <tr>
+      <th>Method</th>
+      <th>SRCC ↑</th>
+      <th>PLCC ↑</th>
+      <th>KRCC ↑</th>
+      <th>RMSE ↓</th>
+    </tr>
+
+    <tr>
+      <td>IP-IQA</td>
+      <td>0.852</td>
+      <td>0.863</td>
+      <td>0.666</td>
+      <td>0.434</td>
+    </tr>
+
+    <tr>
+      <td>T2VQA</td>
+      <td>0.810</td>
+      <td>0.826</td>
+      <td>0.623</td>
+      <td>0.499</td>
+    </tr>
+
+    <tr>
+      <td><b>EduVQA (Ours)</b></td>
+      <td class="highlight">0.869</td>
+      <td class="highlight">0.879</td>
+      <td class="highlight">0.688</td>
+      <td class="highlight">0.417</td>
+    </tr>
+  </table>
+
+  <h3>Prompt Alignment</h3>
+
+  <table>
+    <tr>
+      <th>Method</th>
+      <th>SRCC ↑</th>
+      <th>PLCC ↑</th>
+      <th>KRCC ↑</th>
+      <th>RMSE ↓</th>
+    </tr>
+
+    <tr>
+      <td>IP-IQA</td>
+      <td>0.648</td>
+      <td>0.653</td>
+      <td>0.469</td>
+      <td>0.593</td>
+    </tr>
+
+    <tr>
+      <td>T2VQA</td>
+      <td>0.731</td>
+      <td>0.733</td>
+      <td>0.544</td>
+      <td>0.564</td>
+    </tr>
+
+    <tr>
+      <td><b>EduVQA (Ours)</b></td>
+      <td class="highlight">0.757</td>
+      <td class="highlight">0.768</td>
+      <td class="highlight">0.571</td>
+      <td class="highlight">0.527</td>
+    </tr>
+  </table>
+
+  <!-- Quick Start -->
+  <h2>⚡ Quick Start</h2>
+
+  <div class="card">
+
+<pre><code>conda create -n eduvqa python=3.10
+conda activate eduvqa
+
+pip install -r requirements.txt</code></pre>
+
+  </div>
+
+  <!-- Contact -->
+  <h2>📧 Contact</h2>
+
+  <div class="card">
+    <p>
+      <b>Baoliang Chen</b>: 
+      <a href="mailto:blchen6-c@my.cityu.edu.hk">
+        blchen6-c@my.cityu.edu.hk
+      </a>
+    </p>
+
+    <p>
+      <b>Xinlong Bu</b>: 
+      <a href="mailto:2024023476@m.scnu.edu.cn">
+        2024023476@m.scnu.edu.cn
+      </a>
+    </p>
+
+    <p>
+      <b>Zhanjie Yu</b>: 
+      <a href="mailto:zhanjieyu@scnu.edu.cn">
+        zhanjieyu@scnu.edu.cn
+      </a>
+    </p>
+  </div>
+
+  <!-- Citation -->
+  <h2>📚 Citation</h2>
+
+<pre><code>@article{
+}</code></pre>
+
+  <footer>
+    © 2026 EduVQA Project Page
+  </footer>
+
+</div>
+
+</body>
+</html>
