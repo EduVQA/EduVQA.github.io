@@ -194,6 +194,8 @@ We introduce **EduAIGVBench**, the first benchmark specifically designed for con
 | Fine-tuned | IPCE | 0.822 | 0.822 | 0.631 | 0.494 |
 | Fine-tuned | IP-IQA | 0.852 | 0.863 | 0.666 | 0.434 |
 | Fine-tuned | DOVER | 0.832 | 0.840 | 0.645 | 0.479 |
+| Fine-tuned | BVQA | 0.848 | 0.862 | - | - |
+| Fine-tuned | CLIPVQA | 0.846 | 0.832 | - | - |
 | Fine-tuned | FasterVQA | 0.844 | 0.856 | 0.659 | 0.456 |
 | Fine-tuned | GSTVQA | 0.837 | 0.849 | 0.655 | 0.456 |
 | Fine-tuned | VSFA | 0.803 | 0.805 | 0.611 | 0.515 |
@@ -226,7 +228,7 @@ All models are trained on EduAIGV-1k and evaluated on two benchmarks.
 
 | Method | Spatial (SRCC/PLCC) | Temporal (SRCC/PLCC) | Alignment (SRCC/PLCC) |
 |--------|---------------------|----------------------|------------------------|
-| BVQA | 0.518 / 0.608 | 0.235 / 0.550 | -- / -- |
+| BVQA | 0.518 / **0.608** | 0.235 / 0.550 | -- / -- |
 | CLIPVQA | 0.509 / 0.480 | 0.355 / 0.287 | -- / -- |
 | FasterVQA | 0.511 / 0.539 | 0.380 / 0.427 | -- / -- |
 | GSTVQA | 0.507 / 0.555 | 0.459 / 0.529 | -- / -- |
@@ -235,7 +237,7 @@ All models are trained on EduAIGV-1k and evaluated on two benchmarks.
 | IPCE | 0.324 / 0.336 | 0.428 / 0.473 | 0.201 / 0.190 |
 | IP-IQA | 0.423 / 0.473 | 0.363 / 0.454 | 0.267 / 0.256 |
 | T2VQA | 0.466 / 0.504 | 0.402 / 0.453 | 0.521 / 0.539 |
-| **EduVQA (Ours)** | **0.536 / 0.593** | **0.511 / 0.571** | **0.529 / 0.547** |
+| **EduVQA (Ours)** | **0.536** / 0.593 | **0.511 / 0.571** | **0.529 / 0.547** |
 
 ---
 
@@ -287,7 +289,7 @@ Models are trained on different datasets and evaluated on unseen benchmarks with
 |--------------|------------------------|------------------------|
 | **EduAIGV-1k (Ours)** | **0.3374 / 0.3405** | 0.4358 / 0.4456 |
 | AIGVE-Bench | 0.1609 / 0.1566 | 0.0914 / 0.0980 |
-| TVGE | 0.2080 / 0.1948 | 0.4522 / 0.4486 |
+| TVGE | 0.2080 / 0.1948 | **0.4522** / 0.4486 |
 | LGVQ | 0.2889 / 0.2965 | 0.4320 / **0.4502** |
 
 ---
@@ -296,10 +298,10 @@ Models are trained on different datasets and evaluated on unseen benchmarks with
 
 | Train Dataset | Perceptual (SRCC/PLCC) | Alignment (SRCC/PLCC) |
 |--------------|------------------------|------------------------|
-| **EduAIGV-1k (Ours)** | **0.5902 / 0.5704** | 0.5428 / 0.5627 |
+| **EduAIGV-1k (Ours)** | **0.5902** / 0.5704 | 0.5428 / 0.5627 |
 | AIGVE-Bench | 0.1926 / 0.1864 | 0.1796 / 0.1832 |
-| TVGE | 0.3063 / 0.3147 | **0.5683 / 0.5592** |
-| LGVQ | 0.5677 / 0.5742 | 0.5394 / **0.5694** |
+| TVGE | 0.3063 / 0.3147 | **0.5683** / 0.5592 |
+| LGVQ | 0.5677 / **0.5742** | 0.5394 / **0.5694** |
 
 
 # ⚡️ Quick Start
