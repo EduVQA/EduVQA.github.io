@@ -67,7 +67,7 @@ Our proposed framework introduces a **Structured 2D Mixture-of-Experts (S2D-MoE)
 
 ---
 
-# 📚 EduAIGVBench
+# 📊 EduAIGVBench
 
 We introduce **EduAIGVBench**, the first benchmark specifically designed for concept-aware educational AI-generated video assessment.
 
@@ -181,11 +181,11 @@ We introduce **EduAIGVBench**, the first benchmark specifically designed for con
 
 ---
 
-# 📊 Experimental Results
+# 📈 Experimental Results
 
-## 📊 Quantitative Results on EduAIGVBench
+## 🔹 Quantitative Results on EduAIGVBench
 
-### 🎯 Perceptual Quality
+### 🧪 Perceptual Quality
 
 | Setting | Method | SRCC ↑ | PLCC ↑ | KRCC ↑ | RMSE ↓ |
 |----------|--------|--------|--------|--------|--------|
@@ -205,7 +205,7 @@ We introduce **EduAIGVBench**, the first benchmark specifically designed for con
 
 ---
 
-### 🎯 Prompt Alignment
+### 🧪 Prompt Alignment
 
 | Setting | Method | SRCC ↑ | PLCC ↑ | KRCC ↑ | RMSE ↓ |
 |----------|--------|--------|--------|--------|--------|
@@ -220,11 +220,11 @@ We introduce **EduAIGVBench**, the first benchmark specifically designed for con
 
 ---
 
-## 📊 Cross-dataset Performance Comparison
+## 🔹 Cross-dataset Performance Comparison
 
 All models are trained on EduAIGV-1k and evaluated on two benchmarks.
 
-### 🧠 LGVQ Dataset
+### 🧪 LGVQ Dataset
 
 | Method | Spatial (SRCC/PLCC) | Temporal (SRCC/PLCC) | Alignment (SRCC/PLCC) |
 |--------|---------------------|----------------------|------------------------|
@@ -241,7 +241,7 @@ All models are trained on EduAIGV-1k and evaluated on two benchmarks.
 
 ---
 
-### 🎯 EvalCrafter Dataset
+### 🧪 EvalCrafter Dataset
 
 | Method | Perceptual (SRCC/PLCC) | Alignment (SRCC/PLCC) |
 |--------|------------------------|------------------------|
@@ -257,7 +257,7 @@ All models are trained on EduAIGV-1k and evaluated on two benchmarks.
 | **EduVQA (Ours)** | **0.408 / 0.398** | **0.586 / 0.599** |
 
 ---
-## 🔬 Cross-dataset Training Analysis
+## 🔹 Cross-dataset Training Analysis
 
 Models are trained on different datasets and evaluated on unseen benchmarks without fine-tuning.
 
