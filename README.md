@@ -6,9 +6,10 @@ Project page for:
 
 
 <p align="center">
-  <a href="https://EduVQA.github.io/" style="margin: 0 10px;">🌐 Homepage</a> |
-  <a href="https://drive.google.com/drive/folders/1wp_aJJI4QVDjEba4pt6ewc90M-UurGTm?usp=drive_link" style="margin: 0 10px;">🎞️ Dataset</a> |
-  <a href="https://arxiv.org/" style="margin: 0 10px;">📖 Paper</a>
+  <a href="https://EduVQA.github.io/">🌐 Homepage</a> |
+  <a href="https://drive.google.com/drive/folders/1wp_aJJI4QVDjEba4pt6ewc90M-UurGTm?usp=drive_link">🎞️ Dataset</a> |
+  <a href="https://github.com/EduVQA/EduVQA">🐱 Code</a> |
+  <a href="https://arxiv.org/">📖 Paper</a>
 </p>
 
 <p align="center">
@@ -21,7 +22,11 @@ Project page for:
 
 ---
 
+## 🔗 Project Website
 
+Visit the official project page:
+
+https://eduvqa.github.io/
 
 ---
 
