@@ -34,7 +34,7 @@ https://eduvqa.github.io/
 
 For any questions, please feel free to reach out to:
 - **Baoliang Chen**: [blchen6-c@my.cityu.edu.hk](mailto:blchen6-c@my.cityu.edu.hk)
-- **Xinlong Bu**: [2024023476@m.scnu.edu.cn](mailto:2024023476@m.scnu.edu.cn)
+- **Xinlong Bu**: [xlbu@m.scnu.edu.cn](mailto:2024023476@m.scnu.edu.cn)
 - **Zhanjie Yu**: [zhanjieyu@scnu.edu.cn](mailto:zhanjieyu@scnu.edu.cn)
 
 ---
