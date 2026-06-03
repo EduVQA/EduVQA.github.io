@@ -9,7 +9,7 @@ Project page for:
   <a href="https://EduVQA.github.io/">🌐 Homepage</a> |
   <a href="https://drive.google.com/drive/folders/1wp_aJJI4QVDjEba4pt6ewc90M-UurGTm?usp=sharing">🎞️ Dataset</a> |
   <a href="https://github.com/EduVQA/EduVQA">🐱 Code</a> |
-  <a href="https://arxiv.org/">📖 Paper</a>
+  <a href="https://arxiv.org/abs/2603.03066">📖 Paper</a>
 </p>
 
 <p align="center">
