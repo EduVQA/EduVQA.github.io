@@ -44,6 +44,13 @@ For any questions, please feel free to reach out to:
 If you find this work useful for your research, please consider citing our paper:
 
 ```bibtex
-@article{
+@misc{chen2026eduvqaconceptawareassessmenteducational,
+      title={EduVQA: Towards Concept-Aware Assessment of Educational AI-Generated Videos}, 
+      author={Baoliang Chen and Xinlong Bu and Hanwei Zhu and Lingyu Zhu and Jieyu Zhan},
+      year={2026},
+      eprint={2603.03066},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2603.03066}, 
 }
 ```
